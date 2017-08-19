@@ -1,0 +1,33 @@
+.banner
+	position: relative
+	margin-bottom: 30px
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba($black, 0.5)
+	&__content
+		position: relative
+		padding: 100px 15px
+		margin: 0 auto
+		max-width: 860px
+		text-align: center
+		+sm
+			max-width: 480px
+		+xs
+			max-width: 320px
+	&__title
+		color: $white
+		+f(bold)
+		font-size: 62px
+		line-height: 1.2
+		+md
+			font-size: 42px
+		+sm
+			font-size: 24px

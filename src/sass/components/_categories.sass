@@ -1,0 +1,64 @@
+.categories
+	margin: 0 -15px
+	+clr
+	+xs
+		margin: 0 0 20px
+
+.category
+	float: left
+	padding: 0 15px 30px
+	width: 20%
+	+md
+		width: 25%
+	+sm
+		width: 50%
+	+xs
+		width: 100%
+		padding: 0 0 10px
+	&__box
+		position: relative
+		display: block
+		overflow: hidden
+		border-radius: 3px
+		box-shadow: 0 0 2px 0 rgba($black, 0.1)
+		line-height: 67px
+		text-align: center
+		text-decoration: none !important
+		+hover
+			.category
+				&__img
+					&:after
+						opacity: 0
+				&__title
+					color: $white
+		+xs
+			line-height: 40px
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: cover
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+		&:before
+			background: rgba($black, 0.2)
+		&:after
+			background: $white
+			transition: opacity 0.175s ease-in-out
+	&__title
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		color: $darkGray 
+		+f(bold, 14, 16)
+		transition: color 0.175s ease-in-out

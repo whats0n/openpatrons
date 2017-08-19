@@ -68,11 +68,17 @@
 		overflow: auto
 		max-height: 200px
 	&__item
-		padding: 10px 20px
-		font-size: 14px
-		line-height: 20px
 		&:not(:first-child)
 			border-top: 1px solid $lightGray
+	&__box
+		display: block
+		padding: 10px 20px
+		color: $darkGray !important
+		font-size: 14px
+		line-height: 20px
+		text-decoration: none !important
+		+hover
+			background: #eefcfd
 	&__img
 		float: left 
 		margin-top: 2px

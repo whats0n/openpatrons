@@ -18,7 +18,7 @@
 				<ul class="sm-search__list">
 					{% for item in range(0,10) %}
 						<li class="sm-search__item">
-							<div class="sm-search__box">
+							<a href="#" class="sm-search__box">
 								{% if loop.index <= 2 %}
 									<div class="sm-search__img" style="background-image: url(https://placecage.com/50/50);"></div>
 									<div class="sm-search__title">Lorem ipsum.</div>
@@ -27,7 +27,7 @@
 									<div class="sm-search__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, molestias.</div>
 									<div class="sm-search__info">by <strong>John Doe</strong></div>
 								{% endif %}
-							</div>
+							</a>
 						</li>
 					{% endfor %}
 				</ul>
