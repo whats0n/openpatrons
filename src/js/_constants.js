@@ -14,6 +14,7 @@ export const mediaXS = () => mediaDetect(599);
 //global elements
 export const $DOCUMENT = $(document);
 export const $BODY = $('body');
+export const $WIN = $(window);
 
 //utils
 export const detectTouch = () => 'ontouchstart' in window;
