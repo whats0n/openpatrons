@@ -20,8 +20,59 @@
 			bottom: 0
 			width: 100%
 			height: 100%
-	a
-		color: $orange
+	&__header
+		padding-bottom: 15px
+		+clr
+	&__info
+		float: left
+	&__user
+		position: relative
+		display: block
+	&__logo
+		margin-right: 12px
+		height: 48px
+		width: 48px
+		border-radius: 50% 
+		overflow: hidden
+		background-position: 50% 50% 
+		background-size: cover
+		vertical-align: top
+		display: inline-block
+	&__links
+		padding-top: 5px
+		vertical-align: top
+		display: inline-block
+	&__patrons
+		float: right
+	&__img
+		margin: 0 -15px
+		padding-bottom: 40%
+		height: 1px
+	&__patrons
+		margin-top: 14px
+		color: #A7B2B8 
+		.icon
+			font-size: 10px
+	&__footer
+		margin-top: 30px
+	&__comments,
+	&__likes
+		+bold
+		font-size: 11px
+		color: #4F687A
+		&:not(:first-child) 
+			margin-left: 10px
+	.post__author-name
+		+bold
+		color: $darkGray 
+		font-size: 16px
+	.post__date
+		font-size: 12px
+		color: #A7B2B8 
+	.post__title
+		margin-top: 15px
+		color: $darkGray 
+		display: block
 
 .info
 	margin: 15px 0
