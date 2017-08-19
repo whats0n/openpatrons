@@ -1,17 +1,41 @@
 <!-- begin header -->
 <header class="header">
-	<h1 class="logo">
-		<a href="#" class="logo__inner">Open Patrons</a>
-	</h1>
-	<div class="header__controls">
-		<a href="#" class="btn header__btn">Login</a>
-		<a href="#" class="btn header__btn">Create your page</a>
-		<div class="sm-search">
-			<form action="/" method="GET">
-				<input type="search" class="sm-search__input">
-				<i class="glyphicon glyphicon-search" aria-hidden="true"></i>
-			</form>
+	<a href="#" class="logo header__logo">Open Patrons</a>
+	<button class="header__nav-btn js-nav-open">
+		<span><i></i></span>
+	</button>
+	<div class="header__nav js-nav">
+		<div class="sm-search js-search">
+			<div class="sm-search__container">
+				<div class="sm-search__field">
+					<form action="/" method="GET">
+						<i class="glyphicon glyphicon-search sm-search__icon" aria-hidden="true"></i>
+						<input type="search" class="sm-search__input js-search-input" placeholder="Search" />
+					</form>
+				</div>
+			</div>
+			<div class="sm-search__dropdown">
+				<ul class="sm-search__list">
+					{% for item in range(0,10) %}
+						<li class="sm-search__item">
+							<div class="sm-search__box">
+								{% if loop.index <= 2 %}
+									<div class="sm-search__img" style="background-image: url(https://placecage.com/50/50);"></div>
+									<div class="sm-search__title">Lorem ipsum.</div>
+									<div class="sm-search__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, molestias.</div>
+								{% else %}
+									<div class="sm-search__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, molestias.</div>
+									<div class="sm-search__info">by <strong>John Doe</strong></div>
+								{% endif %}
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+				<a href="#" class="sm-search__more">See All Results</a>
+			</div>
 		</div>
+		<a href="#" class="header__btn">Create your page</a>
+		<a href="#" class="header__btn">Login</a>
 	</div>
 </header>
 <!-- end header -->

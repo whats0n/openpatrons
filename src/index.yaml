@@ -2,4 +2,4 @@ ProjectTitle: openpatrons
 
 PageList:
 - file: home.html
-  ready: 0
+  ready: 1

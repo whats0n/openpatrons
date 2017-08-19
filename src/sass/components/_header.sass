@@ -1,2 +1,96 @@
 .header
-	background: #eee
+	position: fixed
+	z-index: 101
+	top: 0
+	left: 0
+	right: 0
+	border-bottom: 2px solid $lightGray
+	background: $white
+	+clr
+	&__logo
+		float: left
+		padding: 0 20px
+		+xs
+			padding: 0 15px
+	&__nav
+		float: right
+		+sm
+			position: fixed
+			top: 52px
+			left: 0
+			right: 0
+			bottom: 0
+			overflow: auto
+			padding: 0 20px
+			opacity: 0
+			visibility: hidden
+			background: $white
+			transition: opacity 0.225s ease-in, visibility 0.225s ease-in
+		&.is-open
+			+sm
+				opacity: 1
+				visibility: visible
+	&__btn
+		float: left
+		padding: 0 20px
+		border-left: 2px solid $lightGray
+		color: $darkGray
+		+f(bold, 16)
+		line-height: 50px
+		+hover
+			color: $darkGray
+			text-decoration: underline
+		+sm
+			float: none
+			display: block
+			padding: 0 20px 0 65px
+			border-left: none
+			border-bottom: 1px solid $lightGray
+			width: 100%
+			font-size: 18px
+			line-height: 60px
+			text-transform: uppercase
+	&__nav-btn
+		float: right
+		display: none
+		border-left: 2px solid $lightGray
+		width: 50px
+		height: 50px
+		background: none
+		+sm
+			display: block
+		&.is-active
+			span
+				&:before
+					transform: translate3d(4px,-2px,0) rotate(45deg)
+				&:after
+					transform: translate3d(2px,2px,0) rotate(-45deg)
+				i
+					opacity: 0
+					transform: translate3d(-70%,0,0) scaleX(0.5)
+		span
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			width: 25px
+			height: 17px
+			&:before,
+			&:after
+				content: ''
+				transform-origin: left top
+				transition: transform 0.2s ease-in
+			&:before,
+			&:after,
+			i
+				position: absolute
+				left: 0
+				border-top: 3px solid $darkGray
+				width: 100%
+			&:before
+				top: 0
+			&:after
+				bottom: 0
+			i
+				top: 50%
+				margin-top: -1px
+				transition: transform 0.2s ease-in, opacity 0.2s ease-in
