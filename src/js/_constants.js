@@ -7,7 +7,7 @@ export const FOCUS = 'is-focus';
 
 //media sizes
 const mediaDetect = size => window.matchMedia(`(max-width: ${size}px)`).matches;
-export const mediaMD = () => mediaDetect(1023);
+export const mediaMD = () => mediaDetect(991);
 export const mediaSM = () => mediaDetect(767);
 export const mediaXS = () => mediaDetect(599);
 

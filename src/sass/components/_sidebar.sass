@@ -1,0 +1,23 @@
+.sidebar
+	padding: 15px
+	background: $white
+	&__btn
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		+md
+			padding: 0 10px
+			width: 50%
+		+xs
+			width: 100%
+		+ .sidebar__btn
+			margin-top: 15px
+			+md
+				margin-top: 0
+			+xs
+				margin-top: 15px
+	&__footer
+		padding-top: 20px
+		font-size: 0
+		+md
+			margin: 0 -10px

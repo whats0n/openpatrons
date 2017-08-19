@@ -5,12 +5,19 @@ title: User page
 
 {% block content %}
 
+	<div class="fixed">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-5 col-sm-12">
+					{% include 'partials/pages/_user-page-sidebar.html' %}
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3">
-				{% include 'partials/pages/_user-page-sidebar.html' %}
-			</div>
-			<div class="col-lg-9">
+			<div class="col-lg-8 col-md-7 col-sm-12 pull-right">
 				{% include 'partials/pages/_user-page-content.html' %}
 			</div>
 		</div>
