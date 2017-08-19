@@ -1,0 +1,80 @@
+.user-info
+	position: relative
+	&__cover
+		position: relative
+		height: 350px
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: cover
+		+xs
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			height: auto
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba($black, 0.5)
+	&__container
+		position: absolute
+		bottom: 20px
+		left: 0
+		right: 0
+		color: $white
+		+xs
+			position: relative
+			bottom: auto
+			padding: 40px 0
+	&__box
+		position: relative
+	&__avatar
+		position: absolute
+		left: 0
+		bottom: 0
+		border: 2px solid $white
+		border-radius: 20px
+		width: 130px
+		height: 130px
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: cover
+		+xs
+			position: relative
+			bottom: auto
+			float: left
+			border-radius: 50%
+			width: 80px
+			height: 80px
+	&__content
+		position: absolute
+		bottom: 0
+		left: 150px
+		right: 0
+		padding: 10px
+		font-size: 32px
+		line-height: 1.2
+		+xs
+			position: relative
+			left: auto
+			overflow: hidden
+			padding: 0 0 0 20px
+	&__title,
+	&__description
+		display: inline-block
+		vertical-align: top
+		+xs
+			display: block
+	&__title
+		+bold
+		+xs
+			padding-bottom: 5px
+			font-size: 22px
+	&__description
+		+xs
+			font-size: 16px
